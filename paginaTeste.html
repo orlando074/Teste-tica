@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Lente de óculos</title>
+</head>
+
+	<center> <font size="22"><b>Lentes de contato</b></font></center></p>
+
+<body>
+
+<font size="4"><b>Forneça suas informações abaixo, para que possamos encontrar a lente certa para você: </b></font></p>	
+
+	
+	
+	Grau esférico do olho esquerdo: 
+	<div id="div1">
+		<input type="number" id="grau1" name="gee" placeholder="digite aqui"><br><br>
+	</div>
+
+
+	Grau esférico do olho direito: 
+	<div id="div2">
+		<input type="number" id="grau2" name="ged" placeholder="digite aqui"><br><br>
+	</div>
+
+	Grau cilíndrico do olho esquerdo: 
+	<div id="div3">
+		<input type="number" id="grau3" name="gce" placeholder="digite aqui"><br><br>
+	</div>
+
+	Grau cilíndrico do olho direito:
+	<div id="div4"> 
+		<input type="number" id="grau4" name="gcd" placeholder="digite aqui"><br><br>
+	</div>
+
+	<center><button onclick="lentePrime()">Buscar</button></center><br><br>	
+
+
+	<script>
+
+	function lentePrime(){ 
+				
+		var valor1 = parseFloat(document.getElementById('grau1').value);
+		var valor2 = parseFloat(document.getElementById('grau2').value);
+		var valor3 = parseFloat(document.getElementById('grau3').value);
+		var valor4 = parseFloat(document.getElementById('grau4').value);
+
+			
+
+		
+		if((valor1 >= -12 && valor1 <= -3) && (valor2 >= -12 && valor2 <= -3)){
+
+					
+
+				if((valor3 >= -2) && (valor4 >= -2))
+
+
+					alert('Lente Prime disponível com graus esféricos e cilíndricos || Graus esféricos de -3 a -10');
+		
+				else 
+
+					alert('Lente Prime disponível com graus esféricos e sem graus cilíndricos');	
+
+		}else if((valor1 >= -15 && valor1 <= 0) && (valor2 >= -15 && valor2 <= 0)){
+					
+
+					alert('Lente Prime indisponível');
+
+
+						if((valor3 >= -5) && (valor4 >= -5))
+
+
+					alert('Lente Vision disponível com graus esféricos e cilíndricos');
+		
+				else 
+
+					alert('Lente Vision disponível com graus esféricos e sem graus cilíndricos');	
+
+				}else{
+					alert('Lente Vision indisponível');
+
+
+		}
+
+	}			
+	
+
+    </script>
+
+
+
+</body>
+</html>
+
